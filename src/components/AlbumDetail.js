@@ -5,16 +5,17 @@ import CardSection from './CardSection';
 
 const AlbumDetail = ({ album }) => {
     const { title, artist, thumbnail_image } = album;
+    const { containerStyle, thumbnailStyle } = styles;
     return (
         <Card>
             <CardSection>
                 <View>
                     <Image 
-                        style={styles.thumbnailStyle} 
+                        style={thumbnailStyle} 
                         source={{ uri: thumbnail_image }} 
                     />
                 </View>
-                <View style={styles.containerStyle}>
+                <View style={containerStyle}>
                     <Text>{artist}</Text>
                     <Text>{title}</Text>
                 </View>
